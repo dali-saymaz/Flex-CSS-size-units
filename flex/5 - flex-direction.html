@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body {
+        padding: 25px 0;
+      }
+      
+      .container {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        border: 5px solid #111;
+        border-radius: 0 16px 16px 16px;
+        padding: 16px 8px 0;
+        margin-bottom: 50px;
+        position: relative;
+      }
+      .container::before {
+        content: attr(title);
+        position: absolute;
+        top: -25px;
+        left: -5px;
+        height: 17px;
+        background: #111;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        padding: 3px 10px 0;
+      }
+      .container .item {
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 4px solid #333;
+        border-radius: 16px;
+        background: #67b9ff;
+        color: #fff;
+        font-weight: bold;
+        font-size: 40px;
+        margin: 0 8px 16px;
+      }
+      .container.flex {
+        display: flex;
+      }
+      .container.flex.flex-direction-row-reverse {
+        flex-direction: row-reverse;
+      }
+      .container.flex.flex-direction-column {
+        flex-direction: column;
+      }
+      .container.flex.flex-direction-column-reverse {
+        flex-direction: column-reverse;
+      }</style>
+</head>
+<body>
+    <div>
+        <h4>flex-direction</h4>
+        <p>Öğelerin yönünü belirlemek için kullanılır. Varsayılan olarak flex container yataya doğru uzar. Dolayısı ile bu kapsayıcı içindeki tüm öğeler yan yana listelenir. Bu özelliğin aldığı birkaç değeri inceleyip ne işe yaradıklarını anlayalım;</p>
+<pre>
+row (varsayılan) = soldan sağa doğru sıralar.
+row-reverse = sağdan sola doğru sıralar.
+column = yukarıdan aşağı doğru sıralar.
+column-reverse = aşağıdan yukarı doğru sıralar.
+</pre>
+
+    </div>
+    <div class="container flex" title="flex-direction: row">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    
+    <div class="container flex flex-direction-row-reverse" title="flex-direction: row-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    
+    <div class="container flex flex-direction-column" title="flex-direction: column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    
+    <div class="container flex flex-direction-column-reverse" title="flex-direction: column-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+  padding: 25px 0;
+}
+
+.container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  border: 5px solid #111;
+  border-radius: 0 16px 16px 16px;
+  padding: 16px 8px 0;
+  margin-bottom: 50px;
+  position: relative;
+}
+.container::before {
+  content: attr(title);
+  position: absolute;
+  top: -25px;
+  left: -5px;
+  height: 17px;
+  background: #111;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 10px 0;
+}
+.container .item {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 4px solid #333;
+  border-radius: 16px;
+  background: #67b9ff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 8px 16px;
+}
+.container.flex {
+  display: flex;
+}
+.container.flex.justify-content-flex-start {
+  justify-content: flex-start;
+}
+.container.flex.justify-content-flex-end {
+  justify-content: flex-end;
+}
+.container.flex.justify-content-center {
+  justify-content: center;
+}
+.container.flex.justify-content-space-between {
+  justify-content: space-between;
+}
+.container.flex.justify-content-space-around {
+  justify-content: space-around;
+}
+.container.flex.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h4>justify-content</h4>
+      
+      <p> Öğelerin yatay eksende hizasını ayarlamak için kullanılır. Yukarıdaki görselde kullanımları ve sonuçları gösterilmiştir. Birde değerlerin ne işe yaradıklarına bakalım.
+      </p>
+        <pre>
+         
+          flex-start (varsayılan) = Öğeleri başlangıç noktasında (sola dayalı) hizalar.
+          flex-end = Öğeleri bitiş noktasında (sağa dayalı) hizalar.
+          center = Öğeleri ortada hizalar.
+          space-between = İlk öğe sola dayalı, son öğe sağa dayalı ve diğerleri ortalı olacak şekilde hizalar.
+          space-around = İlk ve son öğe hariç diğerlerinin arası eşit olacak şekilde hizalar.
+          space-evenly = Tüm öğelerin arası aynı eşitlikte olacak şekilde hizalar.
+</pre>
+<div class="container flex justify-content-flex-start" title="justify-content: flex-start">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</div>
+
+<div class="container flex justify-content-flex-end" title="justify-content: flex-end">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</div>
+
+<div class="container flex justify-content-center" title="justify-content: center">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</div>
+
+<div class="container flex justify-content-space-between" title="justify-content: space-between">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</div>
+
+<div class="container flex justify-content-space-around" title="justify-content: space-around">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</div>
+
+<div class="container flex justify-content-space-evenly" title="justify-content: space-evenly">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</div>
+</body>
+</html>

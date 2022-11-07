@@ -1,0 +1,29 @@
+:root{font-size: 16px;}
+
+ /* html{font-size: 16px;} */
+
+@media only screen and (max-width: 400px) {
+    :root{font-size: 5px;}
+  }
+
+
+  #dali{font-size: 20px;}
+
+
+
+  @media only screen and (max-width: 400px) {
+  #das1{font-size: 20px;}
+  #das2{font-size: 24px;}
+  #das3{font-size: 26px;}  }
+
+
+  @media only screen and (max-width: 600px) {
+  #das1{font-size: 40px;}
+  #das2{font-size: 44px;}
+  #das3{font-size: 56px;}  }
+
+  @media only screen and (max-width: 1000px) {
+  #das1{font-size: 70px;}
+  #das2{font-size: 90px;}
+  #das3{font-size: 100px;} }
+
